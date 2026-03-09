@@ -74,6 +74,8 @@ export const questions = [
       sec: "B",
       marks: 1,
       type: "text",
+      image: "B2 – Bus times",
+      imgSrc: "images/QB2.png",
       text: "Lucy looks at the waiting times for buses.\n\nWaiting times for buses:\nBus 2 to town centre – 3 minutes\nBus 4 to station – 20 minutes\nBus 5 to town centre – 7 minutes\nBus 7 to town centre – 18 minutes\nBus 8 to station – 9 minutes\nBus 11 to airport – 6 minutes\nBus 13 to station – 14 minutes\n\nLucy takes a bus to the station. She takes the bus with the least waiting time.\n\nWhich bus does Lucy take?",
       answer: "8",
       displayAnswer: "Bus 8",
