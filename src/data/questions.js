@@ -11,46 +11,44 @@ export const questions = [
     // SECTION A – Non-calculator (3 questions)
     // ═══════════════════════════════════════════════════════════════════
   
-    {
-      id: "A1",
-      sec: "A",
-      marks: 1,
-      type: "choice",
-      image: "A1 – Clock Reading",
-      imgSrc: "images/QA1.png",
-      text: "Lucy wants to wake up before seven o'clock.\n\nWhat time will Lucy set her alarm clock to?\n\nTick (✓) the correct answer.",
-      options: ["A", "B", "C", "D"],
-      answer: "A",
-      displayAnswer: "A",
-      hint: "Look for the clock showing a time before 7 o'clock.",
-      explanation: "Clock A shows 9:00. Clock B shows 1:00. Clock C shows 5:30. Clock D shows 7:00. Answer is A (or any time before 7 o'clock)."
-    },
-  
-    {
-      id: "A2",
-      sec: "A",
-      marks: 1,
-      type: "text",
-      text: "Lucy looks at the waiting times for buses.\n\nWaiting times for buses:\nBus 2 to town centre – 3 minutes\nBus 4 to station – 20 minutes\nBus 5 to town centre – 7 minutes\nBus 7 to town centre – 18 minutes\nBus 8 to station – 9 minutes\nBus 11 to airport – 6 minutes\nBus 13 to station – 14 minutes\n\nLucy takes a bus to the station. She takes the bus with the least waiting time.\n\nWhich bus does Lucy take?",
-      answer: "Bus 8",
-      displayAnswer: "Bus 8",
-      hint: "Find buses going to the station. Which has the smallest waiting time?",
-      explanation: "Buses to station: Bus 4 (20 min), Bus 8 (9 min), Bus 13 (14 min). Bus 8 has the least waiting time."
-    },
-  
-    {
-      id: "A3",
-      sec: "A",
-      marks: 1,
-      type: "number",
-      image: "A3 – Rail Ticket Cost Chart",
-      imgSrc: "images/QA3.png",
-      text: "Lucy compares the costs of rail and bus tickets.\n\nThe chart shows the cost of rail tickets.\n\nLucy pays £11 for an adult week bus ticket.\n\nHow much less does Lucy pay for an adult week bus ticket than an adult week rail ticket?",
-      answer: 16,
-      displayAnswer: "£16",
-      hint: "Find the adult week rail ticket cost on the chart. Subtract £11.",
-      explanation: "Adult week rail ticket costs £27. £27 - £11 = £16"
-    },
+   // SECTION A – Non-calculator (3 questions)
+
+{
+  id: "A1",
+  sec: "A",
+  marks: 1,
+  type: "number",
+  text: "Lucy works in a furniture shop.\n\nShe wants to know how many hours she works each week.\n\nComplete the calculation.\n\n7 × 5 = ",
+  answer: 35,
+  displayAnswer: "35",
+  hint: "Multiply 7 by 5.",
+  explanation: "7 × 5 = 35 hours per week."
+},
+
+{
+  id: "A2",
+  sec: "A",
+  marks: 3,
+  type: "yesno",
+  text: "Lucy has 5 weeks of holidays in the year.\n\nShe will work for all the other weeks in the year.\n\nLucy says she will work for 43 weeks in the year.\n\nIs Lucy correct?\n\nShow why you think this.",
+  answer: "Yes",
+  displayAnswer: "Yes",
+  hint: "There are 52 weeks in a year. Subtract the 5 weeks of holiday.",
+  explanation: "52 - 5 = 47 weeks. Lucy would work 47 weeks, not 43 weeks. So Lucy is NOT correct. Answer: No."
+},
+
+{
+  id: "A3",
+  sec: "A",
+  marks: 3,
+  type: "twonumber",
+  labels: ["Number of shelves", "Brackets left over"],
+  text: "Lucy fits shelves in the shop.\n\nShe needs 4 brackets to fit each shelf.\n\nLucy has 58 brackets.\n\nHow many shelves can Lucy fit?\n\nShow how many brackets are left over.",
+  answer: [14, 2],
+  displayAnswer: "14 shelves, 2 brackets left over",
+  hint: "Divide 58 by 4. The answer tells you shelves. The remainder is brackets left over.",
+  explanation: "58 ÷ 4 = 14 remainder 2. So Lucy can fit 14 shelves with 2 brackets left over."
+},
   
     // ═══════════════════════════════════════════════════════════════════
     // SECTION B – Calculator (15 questions, skip Q10)
@@ -77,10 +75,12 @@ export const questions = [
       marks: 1,
       type: "text",
       text: "Lucy looks at the waiting times for buses.\n\nWaiting times for buses:\nBus 2 to town centre – 3 minutes\nBus 4 to station – 20 minutes\nBus 5 to town centre – 7 minutes\nBus 7 to town centre – 18 minutes\nBus 8 to station – 9 minutes\nBus 11 to airport – 6 minutes\nBus 13 to station – 14 minutes\n\nLucy takes a bus to the station. She takes the bus with the least waiting time.\n\nWhich bus does Lucy take?",
-      answer: "Bus 8",
+      answer: "8",
       displayAnswer: "Bus 8",
+      normalize: v => v.trim().toLowerCase().replace(/\s/g, ""),
+      check: v => v === "8" || v === "bus8",
       hint: "Find buses going to the station. Which has the smallest waiting time?",
-      explanation: "Buses to station: Bus 4 (20 min), Bus 8 (9 min), Bus 13 (14 min). Bus 8 has the least waiting time of 9 minutes."
+      explanation: "Buses to station: Bus 4 (20 min), Bus 8 (9 min), Bus 13 (14 min). Bus 8 has the least waiting time."
     },
   
     {
