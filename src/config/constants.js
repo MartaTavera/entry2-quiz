@@ -15,9 +15,9 @@ export const C = {
   ok:  "#16a34a",
   err: "#dc2626",
   neu: "#6b7280",
-  bg:  "#f8fafc",
+  bg:  "#2B2B36",
   card:"#add8e6 ",
   bdr: "#e2e8f0",
   a:   "#00008b",
-  b:   "#7c3aed",
+  b:   "#6E256E",
 }
